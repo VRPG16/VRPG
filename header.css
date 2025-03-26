@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.header-overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 36px;
+    background-color: #000000;
+    z-index: 2;
+}
+
+.header {
+    background: #171615;
+    position: sticky;
+    top: 0px;
+    height: 80px;
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 60%;
+    cursor: pointer;
+}
+
+.join-button {
+    position: absolute;
+    right: 20px; /* Подстраиваем расположение по вашему желанию */
+    top: 50%;
+    transform: translateY(-50%);
+    height: 39px;
+    width: 198px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.48px;
+    vertical-align: baseline;
+    word-spacing: 0px;
+    font-optical-sizing: auto;
+    background-color: #3C8527;
+    text-align: center;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+    line-height: 20px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0px 4px 0px rgb(42, 100, 28),
+    -4px 0px 0px rgb(42, 100, 28),
+    0px -4px 0px rgb(82, 165, 53),
+    4px 0px 0px rgba(42, 100, 28);
+    transition: background-color 0.05s ease;
+    text-decoration: none;
+    transition: text-decoration 1s ease;
+}
+.join-txt {
+    transform: translateY(-50%);
+}
+
+.join-button:hover {
+    background-color: #337121;
+}
+.content {
+    height: 2000px;
+}
+
+body {
+    background-color: #5F8DF5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+}
+
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('MinecraftTen-VGORe.ttf') format('truetype');
+  }
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('путь_к_вашему_файлу_шрифта/NotoSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('путь_к_вашему_файлу_шрифта/NotoSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+.container {
+    display: flex;
+}
+.support-button {
+    display: inline-block;
+    padding: 11px 0px;
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    border-radius: 5px;
+    width: 101;
+    transform: translateY(50%);
+    line-height: 18px;
+    font-size: 13px;
+    font-stretch: 100%;
+    text-transform: uppercase;
+  }
+  
+  .support-button:hover {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(7%) saturate(3003%) hue-rotate(41deg) brightness(90%) contrast(93%);
+}
+.socials-button {
+    display: inline-block;
+    padding: 11px 20px;
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none;
+    font-family: 'Noto Sans';
+    font-weight: 700;
+    border-radius: 5px;
+    width: 101;
+    transform: translateY(50%);
+    line-height: 18px;
+    font-size: 13px;
+    font-stretch: 100%;
+    text-transform: uppercase;
+  }
+  
+  .ssocials-button:hover {
+    filter: brightness(0) saturate(100%) invert(97%) sepia(7%) saturate(3003%) hue-rotate(41deg) brightness(90%) contrast(93%);
+}
