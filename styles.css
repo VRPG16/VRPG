@@ -64,11 +64,12 @@ body {
 }
 
 .join-button:hover {
-    background-color: #7dc65d;
+    background-color: #ffffff;
 }
 
 .logo {
     position: absolute;
+    left: 0;
     left: 19%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -82,7 +83,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Чтобы Blogo не выходил за границы */
+    overflow: hidden;
 }
 
 .banner-content {
@@ -93,7 +94,7 @@ body {
 
 .game_banner {
     width: 100%;
-    object-fit: cover; /* Растягивает картинку без искажений */
+    object-fit: cover;
     display: block;
 }
 
@@ -105,7 +106,37 @@ body {
     width: 30%;
 }
 
+.download-button {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
 
+    height: 39px;
+    width: 149px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.48px;
+    vertical-align: middle;
+    word-spacing: 0px;
+    font-optical-sizing: auto;
+    background-color: #3C8527;
+    background-image: linear-gradient(135deg, transparent 0%, #3C8527 25%, #3C8527 50%, #3C8527 75%, transparent 100%);
+    background-size: 20px 20px;
+    text-align: center;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+    line-height: 39px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0px 4px 0px rgb(42, 100, 28),
+    0px -4px 0px rgb(82, 165, 53);
+    transition: background-color 0.05s ease;
+    text-decoration: none;
+    transition: text-decoration 1s ease;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
