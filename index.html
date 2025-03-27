@@ -17,8 +17,8 @@ document.addEventListener("scroll", function () {
     function handleEvent(event) {
       if (event.type === 'resize') {
         const logo = document.querySelector(".logo");
-        const zoomLevel = window.devicePixelRatio;
-        if (zoomLevel <= 2.0) {
+        const zoomLevel = window.matchMedia("only screen and (max-width: 760px)").matches;
+        if (!zoomLevel) {
           logo.style.left = '19%';
           logo.style.top = '50%';
           logo.style.transform = 'translate(-50%, -50%)';
@@ -30,20 +30,18 @@ document.addEventListener("scroll", function () {
       }
     }
   
-    window.addEventListener('resize', handleEvent);
-  </script>
-  </script>
-  <script>
     function checkZoom() {
       const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       const downloadButton = document.querySelector(".download-button");
-      if (isMobile) {
-        downloadButton.style.display = 'none';
-      } else {
-        downloadButton.style.display = 'block';
-      }
+      downloadButton.style.display = isMobile ? 'none' : 'block';
     }
-    window.addEventListener('resize', checkZoom);
+  
+    window.addEventListener('resize', (event) => {
+      handleEvent(event);
+      checkZoom();
+    });
+
+    document.addEventListener("DOMContentLoaded", checkZoom);
   </script>
 </head>
 <body>
