@@ -33,7 +33,9 @@ document.addEventListener("scroll", function () {
     function checkZoom() {
       const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       const downloadButton = document.querySelector(".download-button");
+      const logo = document.querySelector(".logo");
       downloadButton.style.display = isMobile ? 'none' : 'block';
+      logo.style.left = isMobile ? '50%' : '19%';
     }
   
     window.addEventListener('resize', (event) => {
