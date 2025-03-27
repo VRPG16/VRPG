@@ -35,7 +35,7 @@ document.addEventListener("scroll", function () {
   </script>
   <script>
     function checkZoom() {
-      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
       const downloadButton = document.querySelector(".download-button");
       if (isMobile) {
         downloadButton.style.display = 'none';
