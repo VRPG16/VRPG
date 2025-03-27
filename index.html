@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
+  <script defer>
+document.addEventListener("scroll", function () {
+    let scrolled = window.scrollY * -0.3; // Управляет подъемом
+    let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000); // Управляет сжатием, но не меньше 0.5
+
+    document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
+});
+
+  </script>
 </head>
 <body>
   <div class="header-overlay"></div>
@@ -17,27 +26,34 @@
   <div class="content">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
   </div>
-  <div class="divider"></div>  
-  <img src="game_banner.jpg" alt="Game Banner" class="game_banner"> 
-    <img src="minecraft_title.png" alt="logo" class="Blogo"> 
-  <div style="position: relative; top: 100px;">
-    <div class="long-content">
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  <div class="divider"></div> 
+  
+  <div class="banner">
+    <div class="banner-content">
+      <img src="minecraft_title.png" alt="Blogo" class="Blogo"> 
+      <img src="game_banner.jpg" alt="Game Banner" class="game_banner"> 
     </div>
-    <div class="Ufooter">
-      <p style="font-size: 18px; font-weight: 300; margin-bottom: 10px;">FOLLOW VRPG</p>
-        <a href="https://discord.com/channels/@me" class="socials-button" target="_blank">
-            <img src="discord-icon.png" alt="Discord Icon" class="discord_icon">
-        </a>
+  </div>
+  
 
-    </div>
-    <div class="footer">
-      <p>&copy; 2025 Vanya’s RPG. Licensed under CC BY-NC.</p>
-    </div>
+  <div class="long-content" style="min-height: 100vh;">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+  </div>
+
+  <div class="Ufooter" style="position: relative; top: 100px;">
+    <p style="font-size: 18px; font-weight: 300; margin-bottom: 10px;">FOLLOW VRPG</p>
+    <a href="https://discord.com/channels/@me" class="socials-button" target="_blank">
+      <img src="discord-icon.png" alt="Discord Icon" class="discord_icon">
+    </a>
+  </div>
+  
+  <div class="footer" style="position: relative; top: 100px;">
+    <p>&copy; 2025 Vanya’s RPG. Licensed under CC BY-NC.</p>
   </div>
 </body>
 </html>
-
