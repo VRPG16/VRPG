@@ -64,7 +64,7 @@ body {
 }
 
 .join-button:hover {
-    background-color: #337121;
+    background-color: #7dc65d;
 }
 
 .logo {
@@ -76,14 +76,48 @@ body {
     cursor: pointer;
 }
 
+.banner {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Чтобы Blogo не выходил за границы */
+}
+
+.banner-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.game_banner {
+    width: 100%;
+    object-fit: cover; /* Растягивает картинку без искажений */
+    display: block;
+}
+
 .Blogo {
-    position: sticky;       
-    bottom: 0px;
-    top: 0px;
+    position: absolute;
+    top: 50%;
     left: 50%;
-    right: 50%;   
-    transform: translate(-50%, -400%) scale(0.5);
-}   
+    transform: translate(-50%, -50%);
+    width: 30%;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .Blogo {
+        transition: transform 0.1s ease-out;
+    }
+}
+
+.scroll-effect {
+    transform: translate(-50%, calc(-50% + var(--scroll-parallax)));
+}
+
 
 @font-face {
     font-family: 'MinecraftTen';
@@ -121,11 +155,7 @@ body {
     width: 100%;
     height: 100%;
 }
-
-.game_banner {
-    width: 100%;
-}
-
+ 
 .Ufooter {
     position: absolute;
     bottom: 80px;
