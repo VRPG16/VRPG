@@ -13,10 +13,43 @@ document.addEventListener("scroll", function () {
 });
 
   </script>
+  <script>
+    function handleEvent(event) {
+      if (event.type === 'resize') {
+        const logo = document.querySelector(".logo");
+        const zoomLevel = window.devicePixelRatio;
+        if (zoomLevel <= 2.0) {
+          logo.style.left = '19%';
+          logo.style.top = '50%';
+          logo.style.transform = 'translate(-50%, -50%)';
+        } else {
+          logo.style.left = '50%';
+          logo.style.top = '50%';
+          logo.style.transform = 'translate(-50%, -50%)';
+        }
+      }
+    }
+  
+    window.addEventListener('resize', handleEvent);
+  </script>
+  </script>
+  <script>
+    function checkZoom() {
+      const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const downloadButton = document.querySelector(".download-button");
+      if (isMobile) {
+        downloadButton.style.display = 'none';
+      } else {
+        downloadButton.style.display = 'block';
+      }
+    }
+    window.addEventListener('resize', checkZoom);
+  </script>
 </head>
 <body>
   <div class="header-overlay"></div>
   <div class="header">
+    <a href="download.html" class="download-button">DOWNLOAD</a>
     <a href="https://discord.com/api/oauth2/authorize?client_id=903273595951946920&redirect_uri=https%3A%2F%2Fvrpg.ml%2Fauth&response_type=code&scope=identify" class="login-button">LOG IN</a>
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vrpg.server.help@gmail.com" class="support-button" target="_blank">Contact Us <img src="button_mark.svg" alt="Mark"></a>
     <a href="main.html" target="_self">
