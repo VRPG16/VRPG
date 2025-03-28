@@ -105,7 +105,37 @@ body {
     width: 30%;
 }
 
+.download-button {
+    position: absolute;
+    right: 200px;
+    top: 50%;
+    transform: translateY(-50%);
 
+    height: 39px;
+    width: 149px;
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    letter-spacing: 0.48px;
+    vertical-align: middle;
+    word-spacing: 0px;
+    font-optical-sizing: auto;
+    background-color: #1a73e8;
+    background-size: 20px 20px;
+    text-align: center;
+    text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.2);
+    color: white;
+    text-decoration: none;
+    line-height: 39px;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 
+    0px 4px 0px #032b44,
+    0px -4px 0px #56b3fa;
+    transition: background-color 0.05s ease;
+    text-decoration: none;
+    transition: text-decoration 1s ease;
+}
 
 
 @media (prefers-reduced-motion: no-preference) {
