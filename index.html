@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <script defer>
-    function animate(time) {
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script defer>
+      const blogo = document.querySelector('.Blogo');
+      function animate(time) {
       requestAnimationFrame(animate);
-
-      let scrolled = window.scrollY * -0.3;
       let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000);
+      let scrolled = window.scrollY * -0.3;
+      blogo.style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
 
-      document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
-    }
+        document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
+      }
 
-    requestAnimationFrame(animate);
-  </script>
+      requestAnimationFrame(animate);
+    </script>
 
-  </script>
-  <script>
-    function checkZoom() {
-      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-      const downloadButton = document.querySelector(".download-button");
-      const logo = document.querySelector(".logo");
-      downloadButton.style.display = isMobile ? 'none' : 'block';
-      logo.style.left = isMobile ? '50%' : '19%';
-      document.querySelector(".login-button").style.width = isMobile ? '70px' : '149px';
-    }
-  
-    window.addEventListener('resize', (event) => {
-      checkZoom();
-    });
+    </script>
+    <script>
+      function checkZoom() {
+        const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+        const downloadButton = document.querySelector(".download-button");
+        const logo = document.querySelector(".logo");
+        downloadButton.style.display = isMobile ? 'none' : 'block';
+        logo.style.left = isMobile ? '50%' : '19%';
+        document.querySelector(".login-button").style.width = isMobile ? '70px' : '149px';
+      }
+    
+      window.addEventListener('resize', (event) => {
+        checkZoom();
+      });
 
-    document.addEventListener("DOMContentLoaded", checkZoom);
-  </script>
-</head>
+      document.addEventListener("DOMContentLoaded", checkZoom);
+    </script>
+  </head>
 <body>
   <div class="header-overlay"></div>
   <div class="header">
