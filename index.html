@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="styles.css">
     <script defer>
       const blogo = document.querySelector('.Blogo');
-      function animate(time) {
+      function animate() {
         let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000); 
         let scrolled = window.scrollY * -0.3;
         blogo.style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
