@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script defer>
+document.addEventListener("scroll", function () {
+    let scrolled = window.scrollY * -0.3; // Управляет подъемом
+    let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000); // Управляет сжатием, но не меньше 0.5
+
+    document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
+});
+
+  </script>
+  <script>
+    function checkZoom() {
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+      const downloadButton = document.querySelector(".download-button");
+      const logo = document.querySelector(".logo");
+      downloadButton.style.display = isMobile ? 'none' : 'block';
+      logo.style.left = isMobile ? '50%' : '19%';
+      document.querySelector(".login-button").style.width = isMobile ? '70px' : '149px';
+    }
+  
+    window.addEventListener('resize', (event) => {
+      handleEvent(event);
+      checkZoom();
+    });
+
+    document.addEventListener("DOMContentLoaded", checkZoom);
+  </script>
+</head>
+<body>
+  <div class="header-overlay"></div>
+  <div class="header">
+    <a href="download.html" class="download-button">DOWNLOAD</a>
+    <a href="https://discord.com/api/oauth2/authorize?client_id=903273595951946920&redirect_uri=https%3A%2F%2Fvrpg.ml%2Fauth&response_type=code&scope=identify" class="login-button">LOG IN</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vrpg.server.help@gmail.com" class="support-button" target="_blank">Contact Us <img src="button_mark.svg" alt="Mark"></a>
+    <a href="index.html" target="_self">
+      <img src="minecraft_title.png" alt="logo" class="logo">
+    </a>
+  </div>  
+  <div class="content">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </div>
+  <div class="divider"></div> 
+  
+  <div class="banner">
+    <div class="banner-content">
+      <img src="minecraft_title.png" alt="Blogo" class="Blogo"> 
+      <img src="game_banner.jpg" alt="Game Banner" class="game_banner"> 
+    </div>
+  </div>
+  
+
+  <div class="long-content" style="min-height: 100vh;">
+  </div>
+
+  <div class="Ufooter" style="position: relative; top: 100px;">
+    <p style="font-size: 18px; font-weight: 300; margin-bottom: 10px;">FOLLOW VRPG</p>
+    <a href="https://discord.com/channels/@me" class="socials-button" target="_blank">
+      <img src="discord-icon.png" alt="Discord Icon" class="discord_icon">
+    </a>
+  </div>
+  
+  <div class="footer" style="position: relative; top: 100px;">
+    <p>&copy; 2025 Vanya’s RPG. Licensed under CC BY-NC.</p>
+  </div>
+</body>
+</html>
