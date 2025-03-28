@@ -13,6 +13,22 @@ document.addEventListener("scroll", function () {
 });
 
   </script>
+  <script>
+    function checkZoom() {
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
+      const downloadButton = document.querySelector(".download-button");
+      const logo = document.querySelector(".logo");
+      downloadButton.style.display = isMobile ? 'none' : 'block';
+      logo.style.left = isMobile ? '50%' : '19%';
+      document.querySelector(".login-button").style.width = isMobile ? '70px' : '149px';
+    }
+  
+    window.addEventListener('resize', (event) => {
+      checkZoom();
+    });
+
+    document.addEventListener("DOMContentLoaded", checkZoom);
+  </script>
 </head>
 <body>
   <div class="header-overlay"></div>
