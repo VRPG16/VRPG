@@ -1,201 +1,62 @@
-.download-box {
-    position: absolute;
-    right: 50%;
-    top: 50%;
-    transform: translate(50%, -50%);
-    background-color: #2e2e2e;
-    width: 540px;
-    border-top: none;
-    box-shadow: 0 2px 0 rgba(0,0,0,0.3);
-    padding: 36px 40px 40px 40px;
-    box-sizing: border-box;
-    margin-top: -56px;
-    color: #ffffff;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/VRPG/styles.css">
+  <link rel="stylesheet" href="download.css">
+</head>
+<body>
+  <div class="header-overlay"></div>
+  <div class="header">
+    <a href="https://discord.com/api/oauth2/authorize?client_id=903273595951946920&redirect_uri=https%3A%2F%2Fvrpg.ml%2Fauth&response_type=code&scope=identify" class="login-button">LOG IN</a>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=vrpg.server.help@gmail.com" class="support-button" target="_blank">Contact Us <img src="/VRPG/button_mark.svg" alt="Mark"></a>
+    <a href="/VRPG/" target="_self">
+      <img src="/VRPG/minecraft_title.png" alt="logo" class="logo">
+    </a>
+  </div>  
+  <div class="content">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  </div>
+  <div class="divider"></div> 
+  <div class="download-curseforge">
+    <div class="download-box">
 
-.download-box h2 {
-    font-size: 18px;
-    font-weight: 700;
-    margin: 0 0 16px 0;
-}
+        <h2>CurseForge: Launcher & VRPG modpack</h2>
 
-.download-box h3 {
-    font-size: 14px;
-    font-weight: 700;
-    margin: 0 0 8px 0;
-}
+        <h3>How to install:</h3>
+        <ol>
+            <li>Download and open the file to run the installer</li>
+            <li>Follow the instructions</li>
+            <li>Install VRPG modpack</li>
+        </ol>
 
-.download-box p {
-    font-size: 13px;
-    line-height: 1.4;
-    color: #cfcfcf;
-    margin: 0 0 16px 0;
-}
+        <a href="https://download.overwolf.com/install/Download?ExtensionId=cfiahnpaolfnlgaihhmobmnjdafknjnjdpdabpcm&utm_term=eyJkb21haW4iOiJjZi13ZWIifQ%3D%3D" class="curseforge-button" target="_blank"><span>DOWNLOAD LAUNCHER</span></a>
+        <br>
+        <a href="https://www.dropbox.com/scl/fi/6eh2ku4a8alp07tkyclik/VRPG-NeoForge.zip?rlkey=13srqmy7xyb4u28zky1y4ylss&st=8vwg9iru&dl=0" class="modpack-button"><span>DOWNLOAD MODPACK</span></a>
 
-.download-box ol {
-    font-size: 13px;
-    line-height: 1.6;
-    padding-left: 18px;
-    color: #ffffff;
-    margin: 0 0 16px 0;
-}
+        <a href="https://www.curseforge.com/download/app" class="alt-link">Launcher alternative download</a>
 
-.download-box ol li {
-    margin-bottom: 6px;
-}
+        <hr>
 
-.download-box .curseforge-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 285px;
-    height: 63px;
-    background-color: #008542;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    cursor: pointer;
-    box-sizing: border-box;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
-    margin-bottom: 12px;
-}
+        <p class="small-text">Just so you know, by downloading any of the software on this page, you agree to the <a href="#">Minecraft End User License Agreement</a> and <a href="#">Privacy Policy</a>.</p>
 
-.download-box .curseforge-button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        linear-gradient(#a0dabd87, #a0dabd87) top,
-        linear-gradient(#a0dabd87   , #a0dabd87) right,
-        linear-gradient(#001c0e7c, #001c0e7c) left,
-        linear-gradient(#001c0e7c, #001c0e7c) bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
-    background-position: top left, top right, top left, bottom left;
-}
+    </div>
+</div>
 
-.curseforge-button {
-    position: relative;
-    overflow: hidden; /* чтобы ничего не вылезло */
-}
+  <div class="long-content" style="min-height: 76%;">
 
-.curseforge-button span {
-    position: relative;
-}
+  </div>
 
-.curseforge-button:hover {
-    background-color: #00743a; /* зелёный */
-}
-
-.curseforge-button:hover::after {
-    background:
-        linear-gradient(#001c0e7c, #001c0e7c) top, /* стало тёмным */
-        linear-gradient(#001c0e7c, #001c0e7c) right, /* стало тёмным */
-        linear-gradient(#a0dabd87, #a0dabd87) left, /* стало светлым */
-        linear-gradient(#a0dabd87, #a0dabd87) bottom; /* стало светлым */
-    background-repeat: no-repeat;
-    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
-    background-position: top left, top right, top left, bottom left;
-}
-
-.curseforge-button:hover span {
-    transform: translateY(2px);
-}
-
-
-.download-box .alt-link {
-    display: block;
-    font-size: 13px;
-    color: #88c058;
-    text-decoration: underline;
-    margin-top: 8px;
-}
-
-.download-box .alt-link:hover {
-    text-decoration: none;
-}
-
-.download-box hr {
-    border: none;
-    border-top: 1px solid #7a7574;
-    margin: 24px 0;
-}
-
-.download-box .small-text {
-    font-size: 11px;
-    color: #cfcfcf;
-    line-height: 1.4;
-}
-
-.download-box .small-text a {
-    color: #80c2a1;
-    text-decoration: underline;
-}
-
-.modpack-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 285px;
-    height: 73px;
-    background-color: #1a73e8;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: 700;
-    text-decoration: none;
-    text-transform: uppercase;
-    position: relative;
-    cursor: pointer;
-    box-sizing: border-box;
-    text-shadow: 0 2px 0 rgba(0, 0, 0, 0.25);
-    margin-bottom: 12px;
-}
-
-.modpack-button::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        linear-gradient(#56b3fa87, #56b3fa87) top,
-        linear-gradient(#56b3fa87   , #56b3fa87) right,
-        linear-gradient(#032b44c7, #032b44c7) left,
-        linear-gradient(#032b44c7, #032b44c7) bottom;
-    background-repeat: no-repeat;
-    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
-    background-position: top left, top right, top left, bottom left;
-}
-
-.modpack-button {
-    position: relative;
-    overflow: hidden; /* чтобы ничего не вылезло */
-}
-
-.modpack-button span {
-    position: relative;
-}
-
-.modpack-button:hover {
-    background-color: #1651b8; /* затемнённый основной цвет */
-}
-
-.modpack-button:hover::after {
-    background:
-        linear-gradient(#032b44c7, #032b44c7) top, /* стало тёмным */
-        linear-gradient(#032b44c7, #032b44c7) right, /* стало тёмным */
-        linear-gradient(#56b3fa87, #56b3fa87) left, /* стало светлым */
-        linear-gradient(#56b3fa87, #56b3fa87) bottom; /* стало светлым */
-    background-repeat: no-repeat;
-    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
-    background-position: top left, top right, top left, bottom left;
-}
-
-.modpack-button:hover span {
-    transform: translateY(2px);
-}
-
+  <div class="Ufooter" style="position: relative; top: 100px;">
+    <p style="font-size: 18px; font-weight: 300; margin-bottom: 10px;">FOLLOW VRPG</p>
+    <a href="https://discord.com/channels/@me" class="socials-button" target="_blank">
+      <img src="/VRPG/discord-icon.png" alt="Discord Icon" class="discord_icon">
+    </a>
+  </div>
+  
+  <div class="footer" style="position: relative; top: 100px;">
+    <p>&copy; 2025 Vanya’s RPG. Licensed under CC BY-NC.</p>
+  </div>
+</body>
+</html>
