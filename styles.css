@@ -130,8 +130,8 @@ body {
     cursor: pointer;
     z-index: 1;
     box-shadow: 
-    0px 4px 0px #032b44,
-    0px -4px 0px #56b3fa;
+    0px 4px 0px #093b68,
+    0px -4px 0px #3995f1;
     transition: background-color 0.05s ease;
     text-decoration: none;
     transition: text-decoration 1s ease;
