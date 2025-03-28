@@ -5,12 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css">
   <script defer>
-document.addEventListener("scroll", function () {
-    let scrolled = window.scrollY * -0.3;
-    let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000);
+    function animate(time) {
+      requestAnimationFrame(animate);
 
-    document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
-});
+      let scrolled = window.scrollY * -0.3;
+      let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000);
+
+      document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
+    }
+
+    requestAnimationFrame(animate);
+  </script>
 
   </script>
   <script>
