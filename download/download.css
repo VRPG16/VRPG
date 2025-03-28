@@ -1,4 +1,3 @@
-/* Общий контейнер */
 .download-box {
     position: absolute;
     right: 50%;
@@ -15,21 +14,18 @@
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
-/* Заголовок */
 .download-box h2 {
     font-size: 18px;
     font-weight: 700;
     margin: 0 0 16px 0;
 }
 
-/* Подзаголовок */
 .download-box h3 {
     font-size: 14px;
     font-weight: 700;
     margin: 0 0 8px 0;
 }
 
-/* Текст */
 .download-box p {
     font-size: 13px;
     line-height: 1.4;
@@ -37,7 +33,6 @@
     margin: 0 0 16px 0;
 }
 
-/* Список */
 .download-box ol {
     font-size: 13px;
     line-height: 1.6;
@@ -50,7 +45,6 @@
     margin-bottom: 6px;
 }
 
-/* Кнопка */
 .download-box .curseforge-button {
     display: inline-flex;
     align-items: center;
@@ -70,7 +64,6 @@
     margin-bottom: 12px;
 }
 
-/* Обводка кнопки */
 .download-box .curseforge-button::after {
     content: "";
     position: absolute;
@@ -86,7 +79,35 @@
     background-position: top left, top right, top left, bottom left;
 }
 
-/* Альтернативная ссылка */
+.curseforge-button {
+    position: relative;
+    overflow: hidden; /* чтобы ничего не вылезло */
+}
+
+.curseforge-button span {
+    position: relative;
+}
+
+.curseforge-button:hover {
+    background-color: #00743a; /* зелёный */
+}
+
+.curseforge-button:hover::after {
+    background:
+        linear-gradient(#001c0e7c, #001c0e7c) top, /* стало тёмным */
+        linear-gradient(#001c0e7c, #001c0e7c) right, /* стало тёмным */
+        linear-gradient(#a0dabd87, #a0dabd87) left, /* стало светлым */
+        linear-gradient(#a0dabd87, #a0dabd87) bottom; /* стало светлым */
+    background-repeat: no-repeat;
+    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
+    background-position: top left, top right, top left, bottom left;
+}
+
+.curseforge-button:hover span {
+    transform: translateY(2px);
+}
+
+
 .download-box .alt-link {
     display: block;
     font-size: 13px;
@@ -95,31 +116,26 @@
     margin-top: 8px;
 }
 
-/* Альтернативная ссылка hover */
 .download-box .alt-link:hover {
     text-decoration: none;
 }
 
-/* Полоса */
 .download-box hr {
     border: none;
     border-top: 1px solid #7a7574;
     margin: 24px 0;
 }
 
-/* Мелкий текст снизу */
 .download-box .small-text {
     font-size: 11px;
     color: #cfcfcf;
     line-height: 1.4;
 }
 
-/* Ссылки в мелком тексте */
 .download-box .small-text a {
     color: #80c2a1;
     text-decoration: underline;
 }
-
 
 .modpack-button {
     display: inline-flex;
@@ -140,7 +156,6 @@
     margin-bottom: 12px;
 }
 
-/* Обводка кнопки */
 .modpack-button::after {
     content: "";
     position: absolute;
@@ -155,3 +170,32 @@
     background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
     background-position: top left, top right, top left, bottom left;
 }
+
+.modpack-button {
+    position: relative;
+    overflow: hidden; /* чтобы ничего не вылезло */
+}
+
+.modpack-button span {
+    position: relative;
+}
+
+.modpack-button:hover {
+    background-color: #1651b8; /* затемнённый основной цвет */
+}
+
+.modpack-button:hover::after {
+    background:
+        linear-gradient(#032b44c7, #032b44c7) top, /* стало тёмным */
+        linear-gradient(#032b44c7, #032b44c7) right, /* стало тёмным */
+        linear-gradient(#56b3fa87, #56b3fa87) left, /* стало светлым */
+        linear-gradient(#56b3fa87, #56b3fa87) bottom; /* стало светлым */
+    background-repeat: no-repeat;
+    background-size: 100% 4px, 4px 100%, 4px 100%, 100% 4px;
+    background-position: top left, top right, top left, bottom left;
+}
+
+.modpack-button:hover span {
+    transform: translateY(2px);
+}
+
