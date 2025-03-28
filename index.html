@@ -6,34 +6,26 @@
     <link rel="stylesheet" href="styles.css">
     <script defer>
       const blogo = document.querySelector('.Blogo');
-      function animate(time) {
-      requestAnimationFrame(animate);
-      let scaleFactor = Math.max(0.8, 1 - window.scrollY / 1000);
-      let scrolled = window.scrollY * -0.3;
-      blogo.style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
-
-        document.querySelector(".Blogo").style.transform = `translate(-50%, calc(-50% + ${scrolled}px)) scale(${scaleFactor})`;
-      }
-
-      requestAnimationFrame(animate);
-    </script>
-
-    </script>
-    <script>
-      function checkZoom() {
-        const isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
-        const downloadButton = document.querySelector(".download-button");
-        const logo = document.querySelector(".logo");
-        downloadButton.style.display = isMobile ? 'none' : 'block';
-        logo.style.left = isMobile ? '50%' : '19%';
-        document.querySelector(".login-button").style.width = isMobile ? '70px' : '149px';
-      }
-    
-      window.addEventListener('resize', (event) => {
-        checkZoom();
+      requestAnimationFrame(function animate(time) {
+        blogo.style.transform = `translate(-50%, calc(-50% + ${window.scrollY * -0.3}px)) scale(${Math.max(0.8, 1 - window.scrollY / 1000)})`;
+        requestAnimationFrame(animate);
       });
+    </script>
 
-      document.addEventListener("DOMContentLoaded", checkZoom);
+    <script>
+      const isMobile = window.matchMedia("only screen and (max-width: 760px)");
+      const downloadButton = document.querySelector(".download-button");
+      const logo = document.querySelector(".logo");
+      const loginButton = document.querySelector(".login-button");
+
+      function update() {
+        downloadButton.style.display = isMobile.matches ? 'none' : 'block';
+        logo.style.left = isMobile.matches ? '50%' : '19%';
+        loginButton.style.width = isMobile.matches ? '70px' : '149px';
+      }
+
+      window.addEventListener('resize', update);
+      document.addEventListener("DOMContentLoaded", update);
     </script>
   </head>
 <body>
